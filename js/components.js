@@ -4,7 +4,7 @@ components.register = `
 <div class='register-container'>
 <div class='form-wrapper'>
   <div class='logo'>
-    <span>Techkids Chat</span>
+    <span>Mindx Chat</span>
   </div>
 
   <div class='form-container'>
@@ -12,22 +12,29 @@ components.register = `
       <div class='name-wrapper'>
         <div class='input-wrapper'>
           <input class='input' type="text" name="firstName" placeholder="First name" />
-        </div>
+          <div class="error" id="firstName-error"></div>
+          </div>
+        
         <div class='input-wrapper'>
           <input class='input' type="text" name="lastName" placeholder="Last name" />
-        </div>
+          <div class="error" id="lastName-error"></div>
+          </div>
       </div>
 
       <div class='input-wrapper'>
         <input class='input' type="email" name="email" placeholder="Email" />
+        <div class="error" id="email-error"></div>
+
       </div>
 
       <div class='input-wrapper'>
         <input class='input' type="password" name="password" placeholder="Password" />
+        <div class="error" id="password-error"></div>
       </div>
 
       <div class='input-wrapper'>
         <input class='input' type="password" name="confirmPassword" placeholder="Confirm password" />
+        <div class="error" id="confirmPassword-error"></div>
       </div>
 
       <div class='input-wrapper register-footer'>
@@ -40,10 +47,6 @@ components.register = `
   </div>
 </div>
 </div>
-
-
-
-
 `;
 
 components.login = `<div><h1>Login Screen</h1></div>`;

@@ -4,22 +4,16 @@ view.setActiveScreen = screenName => {
   switch (screenName) {
     case 'register':
       document.getElementById('app').innerHTML = components.register;
-      document
-        .getElementById('already-have-account')
-        .addEventListener('click', () => {
-          view.setActiveScreen('login');
-        });
       const registerForm = document.getElementById('register-form');
+
       registerForm.addEventListener('submit', e => {
         e.preventDefault();
         const registerInfo = {
-          firstName: registerForm.firstName.value,
-          lastName: registerForm.lastName.value,
           email: registerForm.email.value,
           password: registerForm.password.value,
           confirmPassword: registerForm.confirmPassword.value
         };
-        controller.register(registerInfo);
+        controller.validateForm(registerInfo);
       });
 
       break;
@@ -29,6 +23,6 @@ view.setActiveScreen = screenName => {
   }
 };
 
-view.setMessage = (elementId, message = '') => {
-  document.getElementById(elementId).innerHTML = message;
+view.setError = (id, textError) => {
+  document.getElementById(id).innerHTML = textError;
 };

@@ -1,36 +1,24 @@
 const controller = {};
 
-controller.register = registerInfo => {
-  if (!registerInfo.firstName) {
-    view.setMessage('firstName-error', 'Please input first name');
-  } else {
-    view.setMessage('firstName-error', '');
-  }
-
-  if (!registerInfo.lastName) {
-    view.setMessage('lastName-error', 'Please input last name');
-  } else {
-    view.setMessage('lastName-error', '');
-  }
-
+controller.validateForm = registerInfo => {
   if (!registerInfo.email) {
-    view.setMessage('email-error', 'Please input Email');
+    view.setError('email-error', 'Email không được bỏ trống');
   } else {
-    view.setMessage('email-error', '');
+    view.setError('email-error', '');
   }
 
   if (!registerInfo.password) {
-    view.setMessage('password-error', 'Please input password');
+    view.setError('password-error', 'Mật khẩu không được bỏ trống');
   } else {
-    view.setMessage('password-error', '');
+    view.setError('email-error', '');
   }
 
   if (
     !registerInfo.confirmPassword ||
     registerInfo.confirmPassword !== registerInfo.password
   ) {
-    view.setMessage('confirmPassword-error', 'Confirm password didnt match');
+    view.setError('confirmPassword-error', 'Mật khẩu không trùng nhau');
   } else {
-    view.setMessage('confirmPassword-error', '');
+    view.setError('email-error', '');
   }
 };

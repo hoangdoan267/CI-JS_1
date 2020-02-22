@@ -49,4 +49,32 @@ components.register = `
 </div>
 `;
 
-components.login = `<div><h1>Login Screen</h1></div>`;
+components.login = `<div class='register-container'>
+<div class='form-wrapper'>
+  <div class='logo'>
+    <span>Mindx Chat</span>
+  </div>
+
+  <div class='form-container'>
+    <form id='login-form'>
+  
+      <div class='input-wrapper'>
+        <input class='input' type="email" name="email" placeholder="Email" />
+        <div class="error" id="email-error"></div>
+
+      </div>
+
+      <div class='input-wrapper'>
+        <input class='input' type="password" name="password" placeholder="Password" />
+        <div class="error" id="password-error"></div>
+      </div>
+
+      <div class='input-wrapper register-footer'>
+        <button class='btn' type='submit'>
+          <span>Login</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>`;

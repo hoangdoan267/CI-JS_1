@@ -37,6 +37,8 @@ components.register = `
         <div class="error" id="confirmPassword-error"></div>
       </div>
 
+      <div class="error" id="form-error"></div>
+
       <div class='input-wrapper register-footer'>
         <a id='already-have-account'>Already have an account? Login</a>
         <button class='btn' type='submit'>
@@ -69,6 +71,9 @@ components.login = `<div class='register-container'>
         <div class="error" id="password-error"></div>
       </div>
 
+      <div class="error" id="form-error"></div>
+
+
       <div class='input-wrapper register-footer'>
         <button class='btn' type='submit'>
           <span>Login</span>
@@ -77,4 +82,34 @@ components.login = `<div class='register-container'>
     </form>
   </div>
 </div>
+</div>`;
+
+//Show thông tin người dùng ở màn hình chat
+components.chat = `
+<div class="chat-container">
+  <div class="header">
+    MindX Chat
+  </div>
+
+  <div class="main">
+    <div class="conversation-detail">
+      <div id="conversation-name" class="conversation-header">
+        Code Intensive JS
+      </div>
+
+      <div class="conversation-messages" id="conversation-messages">
+      </div>
+
+      <form name="message-form" id="message-form">
+        <div class="conversation-input">
+          <input id="message-input" name="message" placeholder="Type your message" />
+          <button class="button" type="submit" >Send</button>
+        </div>
+      </form>
+
+
+    </div>  
+  </div>
+
+
 </div>`;

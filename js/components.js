@@ -13,7 +13,7 @@ components.register = `
         <div class='input-wrapper'>
           <input class='input' type="text" name="firstName" placeholder="First name" />
           <div class="error" id="firstName-error"></div>
-          </div>
+        </div>
         
         <div class='input-wrapper'>
           <input class='input' type="text" name="lastName" placeholder="Last name" />
@@ -91,7 +91,44 @@ components.chat = `
     MindX Chat
   </div>
 
+  <div class="add-conversation-modal" id="add-conversation-modal">
+    <div class="header">
+      Add Conversation
+    </div>
+    
+    <form id="add-conversation-form">
+      <div class='input-wrapper'>
+        <input class='input' type="text" name="conversationName" placeholder="Conversation Name" />
+      </div>
+      <div class='input-wrapper'>
+        <input class='input' type="text" name="email" placeholder="User email" />
+      </div>
+      <div class='input-wrapper'>
+        <button class='btn' type='submit'>
+          <span>Add</span>
+        </button>
+        <button class='btn cancel-btn' id="cancel-modal-btn">
+          <span>Cancel</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
   <div class="main">
+    <div class="conversation-list">
+      <div class="create-conversation">
+        <button id="create-conversation" class="btn"> + New Conversation </button>
+      </div>
+      <div class="conversation-item">
+        <span>Conversation A</span>
+      </div>
+      <div class="conversation-item">
+        <span>Conversation b</span>
+      </div>
+      <div class="conversation-item">
+        <span>Conversation c</span>
+      </div>
+    </div>
     <div class="conversation-detail">
       <div id="conversation-name" class="conversation-header">
         Code Intensive JS
@@ -106,10 +143,6 @@ components.chat = `
           <button class="button" type="submit" >Send</button>
         </div>
       </form>
-
-
     </div>  
   </div>
-
-
 </div>`;
